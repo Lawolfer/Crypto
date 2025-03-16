@@ -114,6 +114,158 @@
                     font-size: 12px;
                     margin-top: 30px;
                 }
+                .prediction-title {
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 20px;
+                    padding: 10px 0;
+                    text-align: center;
+                    background: linear-gradient(to right, rgba(26, 35, 126, 0.05), rgba(26, 35, 126, 0.1), rgba(26, 35, 126, 0.05));
+                    border-radius: 8px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .prediction-section {
+                    margin-bottom: 20px;
+                    padding: 15px;
+                    border-radius: 8px;
+                    background-color: #fafafa;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                    transition: all 0.3s ease;
+                }
+                .prediction-section:hover {
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    transform: translateY(-2px);
+                }
+                .prediction-section:last-child {
+                    margin-bottom: 0;
+                }
+                .prediction-section-title {
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                }
+                .prediction-section-title::before {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 16px;
+                    background-color: #3949ab;
+                    margin-right: 10px;
+                    border-radius: 3px;
+                }
+                .prediction-section-content {
+                    padding: 10px;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: 1px solid #eee;
+                }
+                .price-range {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 15px 0;
+                    background: linear-gradient(to right, #e3f2fd, #bbdefb, #e3f2fd);
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .price-range-item {
+                    text-align: center;
+                    flex: 1;
+                }
+                .price-range-label {
+                    font-size: 12px;
+                    color: #546e7a;
+                    margin-bottom: 5px;
+                }
+                .price-range-value {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #1a237e;
+                }
+                .key-level {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                }
+                .key-level-resistance {
+                    color: #d32f2f;
+                }
+                .key-level-support {
+                    color: #388e3c;
+                }
+                .key-level-value {
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+                .recommendation-item {
+                    margin-bottom: 8px;
+                    padding-left: 20px;
+                    position: relative;
+                }
+                .recommendation-item::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
+                    color: #3949ab;
+                    font-weight: bold;
+                }
+                .analysis-container {
+                    padding: 10px;
+                    background-color: #fafafa;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                }
+                .analysis-content {
+                    padding: 15px;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    border: 1px solid #eee;
+                    line-height: 1.6;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+                }
+                .analysis-section {
+                    margin-bottom: 15px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px dashed #e0e0e0;
+                }
+                .analysis-section:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .technical-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                .technical-indicator {
+                    display: inline-block;
+                    margin: 5px 10px 5px 0;
+                    padding: 3px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .indicator-buy {
+                    background-color: rgba(76, 175, 80, 0.15);
+                    color: #388e3c;
+                }
+                .indicator-sell {
+                    background-color: rgba(244, 67, 54, 0.15);
+                    color: #d32f2f;
+                }
+                .indicator-neutral {
+                    background-color: rgba(117, 117, 117, 0.15);
+                    color: #616161;
+                }
             </style>
         </head>
         <body>
@@ -126,8 +278,8 @@
                     </div>
                     <div class="price-info">
                         <div class="current-price">$0.74</div>
-                        <div class="price-change price-down">↓ 0.38%</div>
-                        <div class="timestamp">По данным на 16.03.2025 02:07</div>
+                        <div class="price-change price-up">↑ 0.35%</div>
+                        <div class="timestamp">По данным на 16.03.2025 07:30</div>
                     </div>
                 </div>
                 
@@ -136,11 +288,11 @@
                     <div class="market-info">
                         <div>
                             <div class="market-label">Рыночная капитализация</div>
-                            <div class="market-value">$26.51 млрд</div>
+                            <div class="market-value">$26.73 млрд</div>
                         </div>
                         <div>
                             <div class="market-label">Объем торгов (24ч)</div>
-                            <div class="market-value">$665.67 млн</div>
+                            <div class="market-value">$577.45 млн</div>
                         </div>
                         <div>
                             <div class="market-label">Ранг по капитализации</div>
@@ -151,28 +303,66 @@
                 
                 <div class="section">
                     <h3>🔍 Технический анализ</h3>
-                    <div>📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ CARDANO:<br>═══════════════════════════════<br><br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br>&#8226; Текущая цена: $0.74<br>&#8226; Изменение (24ч): -0.30%<br>&#8226; Волатильность (годовая): 2.5%<br>&#8226; ATR: $0.00 (0.1%)<br><br>📈 ТРЕНД: СИЛЬНЫЙ НИСХОДЯЩИЙ 📉<br>&#8226; Характеристика: Все МА выстроились в медвежьем порядке<br>&#8226; Сила тренда (ADX): 45.0 (СИЛЬНЫЙ)<br>&#8226; +DI: 26.0 | -DI: 74.0<br><br>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br>&#8226; RSI: 26.0 (ПЕРЕПРОДАН ⚠️)<br>  ↳ Возможен отскок<br>&#8226; Стохастический RSI: <br>  ↳ %K: 83.7 | %D: 54.2<br>&#8226; MACD: ПРОДАЖА 📉<br>  ↳ MACD: -0.00 | Signal: -0.00<br>  ↳ Гистограмма: -0.00<br><br>📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:<br>&#8226; EMA 9: $0.74<br>&#8226; EMA 21: $0.74<br>&#8226; SMA 20: $0.74<br>&#8226; SMA 50: $0.75<br>&#8226; SMA 200: $0.75<br><br>📏 BOLLINGER BANDS:<br>&#8226; Верхняя: $0.74<br>&#8226; Средняя: $0.74<br>&#8226; Нижняя: $0.74<br>&#8226; Ширина: 0.4%<br>&#8226; Позиция: 36.9%<br><br>💡 РЕКОМЕНДАЦИИ:<br>&#8226; ТАКТИКА: Поиск точек для отскока<br>&#8226; ВХОДЫ: После формирования разворотных паттернов<br>&#8226; СТОП-ЛОСС: -1 ATR от точки входа<br>&#8226; РИСКИ: Продолжение нисходящего тренда<br>&#8226; ДЕЙСТВИЯ:<br>  ↳ Ожидание подтверждения разворота<br>  ↳ Мелкие тестовые позиции<br>  ↳ Фиксация прибыли по короткой позиции</div>
+                    <div class="analysis-container">
+                        <div class="analysis-content">🔮 ПРОГНОЗ НА 24 ЧАСА:<br>───────────────────────<br>📊 Ожидаемый диапазон:<br>&#8226; Максимум: $0.74<br>&#8226; Минимум: $0.74<br>&#8226; Наиболее вероятно: $0.74<br><br>📈 Ключевые уровни:<br>&#8226; Сопротивление: $0.74<br>&#8226; Поддержка: $0.74<br><br>⚡️ Факторы влияния:<br>&#8226; Тренд: СИЛЬНЫЙ НИСХОДЯЩИЙ<br>&#8226; Волатильность: 0.1%<br>&#8226; Ширина канала: $0.00<br><br>🧠 ПОДРОБНОЕ ОБОСНОВАНИЕ:<br>&#8226; Текущий тренд сильный нисходящий с сильный импульсом<br>&#8226; RSI = 29.4 указывает на перепроданность состояние<br>&#8226; MACD показывает падающий импульс<br>&#8226; Цена находится в средней части канала<br>&#8226; Вероятный сценарий: продолжение нисходящего движения<br>&#8226; Прогнозный диапазон основан на исторической волатильности 0.1%<br>&#8226; Расширение диапазона учитывает 24-часовой период прогноза<br>&#8226; Факторы потенциального изменения прогноза:<br>  - Отскок от уровня поддержки может замедлить падение<br>  - Рост выше SMA20 ($0.74) может сигнализировать о развороте<br><br>💡 Рекомендации:<br>&#8226; Внимание на уровни поддержки<br>&#8226; Осторожность при покупках<br>&#8226; Сокращение позиций при пробоях уровней<br></div>
+                    </div>
                 </div>
                 
                 <div class="section">
                     <h3>🔮 Прогноз</h3>
-                    <div>🔮 ПРОГНОЗ НА 24 ЧАСА:<br>───────────────────────<br>📊 Ожидаемый диапазон:<br>&#8226; Максимум: $0.74<br>&#8226; Минимум: $0.74<br>&#8226; Наиболее вероятно: $0.74<br><br>📈 Ключевые уровни:<br>&#8226; Сопротивление: $0.74<br>&#8226; Поддержка: $0.74<br><br>⚡️ Факторы влияния:<br>&#8226; Тренд: НИСХОДЯЩИЙ<br>&#8226; Волатильность: 0.1%<br>&#8226; Ширина канала: $0.00<br><br>💡 Рекомендации:<br>&#8226; Внимание на уровни поддержки<br>&#8226; Осторожность при покупках<br></div>
+                    <div><div class="prediction-title">📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ CARDANO:
+═══════════════════════════════
+
+💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:
+• Текущая цена: $0.74
+• Изменение (24ч): +0.35%
+• Волатильность (годовая): 2.2%
+• ATR: $0.00 (0.1%)
+
+📈 ТРЕНД: СИЛЬНЫЙ НИСХОДЯЩИЙ 📉
+• Характеристика: Все МА выстроились в медвежьем порядке
+• Сила тренда (ADX): 26.8 (СИЛЬНЫЙ)
+• +DI: 29.4 | -DI: 70.6
+
+🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:
+• RSI: 29.4 (ПЕРЕПРОДАН ⚠️)
+  ↳ Возможен отскок
+• Стохастический RSI: 
+  ↳ %K: 80.2 | %D: 81.9
+• MACD: ПРОДАЖА 📉
+  ↳ MACD: -0.00 | Signal: -0.00
+  ↳ Гистограмма: -0.00
+
+📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:
+• EMA 9: $0.74
+• EMA 21: $0.74
+• SMA 20: $0.74
+• SMA 50: $0.74
+• SMA 200: $0.75
+
+📏 BOLLINGER BANDS:
+• Верхняя: $0.74
+• Средняя: $0.74
+• Нижняя: $0.74
+• Ширина: 0.1%
+• Позиция: 50.3%
+
+💡 РЕКОМЕНДАЦИИ:
+• ТАКТИКА: Поиск точек для отскока
+• ВХОДЫ: После формирования разворотных паттернов
+• СТОП-ЛОСС: -1 ATR от точки входа
+• РИСКИ: Продолжение нисходящего тренда
+• ДЕЙСТВИЯ:
+  ↳ Ожидание подтверждения разворота
+  ↳ Мелкие тестовые позиции
+  ↳ Фиксация прибыли по короткой позиции</div><div class="prediction-section"><div class="prediction-section-title">📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ CARDANO:</div><div class="prediction-section-content">═══════════════════════════════<br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br><div class="recommendation-item">Текущая цена: $0.74</div><div class="recommendation-item">Изменение (24ч): +0.35%</div><div class="recommendation-item">Волатильность (годовая): 2.2%</div><div class="recommendation-item">ATR: $0.00 (0.1%)</div></div></div><div class="prediction-section"><div class="prediction-section-title">📈 ТРЕНД: СИЛЬНЫЙ НИСХОДЯЩИЙ 📉</div><div class="prediction-section-content"><div class="recommendation-item">Характеристика: Все МА выстроились в медвежьем порядке</div><div class="recommendation-item">Сила тренда (ADX): 26.8 (СИЛЬНЫЙ)</div><div class="recommendation-item">+DI: 29.4 | -DI: 70.6</div>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br><div class="recommendation-item">RSI: 29.4 (ПЕРЕПРОДАН ⚠️)</div>↳ Возможен отскок<br><div class="recommendation-item">Стохастический RSI:</div>↳ %K: 80.2 | %D: 81.9<br><div class="recommendation-item">MACD: ПРОДАЖА 📉</div>↳ MACD: -0.00 | Signal: -0.00<br>↳ Гистограмма: -0.00<br></div></div><div class="prediction-section"><div class="prediction-section-title">📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:</div><div class="prediction-section-content"><div class="recommendation-item">EMA 9: $0.74</div><div class="recommendation-item">EMA 21: $0.74</div><div class="recommendation-item">SMA 20: $0.74</div><div class="recommendation-item">SMA 50: $0.74</div><div class="recommendation-item">SMA 200: $0.75</div>📏 BOLLINGER BANDS:<br><div class="recommendation-item">Верхняя: $0.74</div><div class="recommendation-item">Средняя: $0.74</div><div class="recommendation-item">Нижняя: $0.74</div><div class="recommendation-item">Ширина: 0.1%</div><div class="recommendation-item">Позиция: 50.3%</div></div></div><div class="prediction-section"><div class="prediction-section-title">💡 РЕКОМЕНДАЦИИ:</div><div class="prediction-section-content"><div class="recommendation-item">ТАКТИКА: Поиск точек для отскока</div><div class="recommendation-item">ВХОДЫ: После формирования разворотных паттернов</div><div class="recommendation-item">СТОП-ЛОСС: -1 ATR от точки входа</div><div class="recommendation-item">РИСКИ: Продолжение нисходящего тренда</div><div class="recommendation-item">ДЕЙСТВИЯ:</div>↳ Ожидание подтверждения разворота<br>↳ Мелкие тестовые позиции<br>↳ Фиксация прибыли по короткой позиции<br></div></div></div>
                 </div>
                 
                 
-            <div class="section">
-                <h3>🌐 Социальные метрики</h3>
-                <div class="social-metrics">
-                    <div>Настроение в Reddit: Н/Д</div>
-                    <div>GitHub активность: Н/Д</div>
-                    <div>Социальный скор: Н/Д</div>
-                </div>
-            </div>
-            
                 
                 <div class="footer">
                     <div>Крипто-аналитика | Данные предоставлены CoinGecko</div>
-                    <div>Отчет сгенерирован автоматически 16.03.2025 02:07</div>
+                    <div>Отчет сгенерирован автоматически 16.03.2025 07:30</div>
                 </div>
             </div>
         </body>
