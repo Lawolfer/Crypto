@@ -114,6 +114,158 @@
                     font-size: 12px;
                     margin-top: 30px;
                 }
+                .prediction-title {
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 20px;
+                    padding: 10px 0;
+                    text-align: center;
+                    background: linear-gradient(to right, rgba(26, 35, 126, 0.05), rgba(26, 35, 126, 0.1), rgba(26, 35, 126, 0.05));
+                    border-radius: 8px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .prediction-section {
+                    margin-bottom: 20px;
+                    padding: 15px;
+                    border-radius: 8px;
+                    background-color: #fafafa;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                    transition: all 0.3s ease;
+                }
+                .prediction-section:hover {
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    transform: translateY(-2px);
+                }
+                .prediction-section:last-child {
+                    margin-bottom: 0;
+                }
+                .prediction-section-title {
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                }
+                .prediction-section-title::before {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 16px;
+                    background-color: #3949ab;
+                    margin-right: 10px;
+                    border-radius: 3px;
+                }
+                .prediction-section-content {
+                    padding: 10px;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: 1px solid #eee;
+                }
+                .price-range {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 15px 0;
+                    background: linear-gradient(to right, #e3f2fd, #bbdefb, #e3f2fd);
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .price-range-item {
+                    text-align: center;
+                    flex: 1;
+                }
+                .price-range-label {
+                    font-size: 12px;
+                    color: #546e7a;
+                    margin-bottom: 5px;
+                }
+                .price-range-value {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #1a237e;
+                }
+                .key-level {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                }
+                .key-level-resistance {
+                    color: #d32f2f;
+                }
+                .key-level-support {
+                    color: #388e3c;
+                }
+                .key-level-value {
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+                .recommendation-item {
+                    margin-bottom: 8px;
+                    padding-left: 20px;
+                    position: relative;
+                }
+                .recommendation-item::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
+                    color: #3949ab;
+                    font-weight: bold;
+                }
+                .analysis-container {
+                    padding: 10px;
+                    background-color: #fafafa;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                }
+                .analysis-content {
+                    padding: 15px;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    border: 1px solid #eee;
+                    line-height: 1.6;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+                }
+                .analysis-section {
+                    margin-bottom: 15px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px dashed #e0e0e0;
+                }
+                .analysis-section:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .technical-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                .technical-indicator {
+                    display: inline-block;
+                    margin: 5px 10px 5px 0;
+                    padding: 3px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .indicator-buy {
+                    background-color: rgba(76, 175, 80, 0.15);
+                    color: #388e3c;
+                }
+                .indicator-sell {
+                    background-color: rgba(244, 67, 54, 0.15);
+                    color: #d32f2f;
+                }
+                .indicator-neutral {
+                    background-color: rgba(117, 117, 117, 0.15);
+                    color: #616161;
+                }
             </style>
         </head>
         <body>
@@ -125,9 +277,9 @@
                         <div class="coin-symbol">ETH</div>
                     </div>
                     <div class="price-info">
-                        <div class="current-price">$1,922.45</div>
-                        <div class="price-change price-up">↑ 0.73%</div>
-                        <div class="timestamp">По данным на 16.03.2025 02:03</div>
+                        <div class="current-price">$1,931.75</div>
+                        <div class="price-change price-up">↑ 0.20%</div>
+                        <div class="timestamp">По данным на 16.03.2025 06:39</div>
                     </div>
                 </div>
                 
@@ -136,11 +288,11 @@
                     <div class="market-info">
                         <div>
                             <div class="market-label">Рыночная капитализация</div>
-                            <div class="market-value">$231.84 млрд</div>
+                            <div class="market-value">$232.99 млрд</div>
                         </div>
                         <div>
                             <div class="market-label">Объем торгов (24ч)</div>
-                            <div class="market-value">$6768.34 млн</div>
+                            <div class="market-value">$6442.68 млн</div>
                         </div>
                         <div>
                             <div class="market-label">Ранг по капитализации</div>
@@ -151,28 +303,45 @@
                 
                 <div class="section">
                     <h3>🔍 Технический анализ</h3>
-                    <div>📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ ETHEREUM:<br>═══════════════════════════════<br><br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br>&#8226; Текущая цена: $1922.45<br>&#8226; Изменение (24ч): +0.73%<br>&#8226; Волатильность (годовая): 1.7%<br>&#8226; ATR: $1.37 (0.1%)<br><br>📈 ТРЕНД: НИСХОДЯЩИЙ 📉<br>&#8226; Характеристика: Краткосрочный тренд отрицательный<br>&#8226; Сила тренда (ADX): 37.2 (СИЛЬНЫЙ)<br>&#8226; +DI: 22.9 | -DI: 77.1<br><br>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br>&#8226; RSI: 22.9 (ПЕРЕПРОДАН ⚠️)<br>  ↳ Возможен отскок<br>&#8226; Стохастический RSI: <br>  ↳ %K: 26.4 | %D: 58.6<br>&#8226; MACD: ПРОДАЖА 📉<br>  ↳ MACD: -4.41 | Signal: -3.57<br>  ↳ Гистограмма: -0.84<br><br>📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:<br>&#8226; EMA 9: $1926.14<br>&#8226; EMA 21: $1930.58<br>&#8226; SMA 20: $1931.94<br>&#8226; SMA 50: $1938.53<br>&#8226; SMA 200: $1934.65<br><br>📏 BOLLINGER BANDS:<br>&#8226; Верхняя: $1926.23<br>&#8226; Средняя: $1923.98<br>&#8226; Нижняя: $1921.74<br>&#8226; Ширина: 0.2%<br>&#8226; Позиция: 15.9%<br><br>💡 РЕКОМЕНДАЦИИ:<br>&#8226; ТАКТИКА: Торговля в диапазоне<br>&#8226; ВХОДЫ: <br>  ↳ Покупки: У нижней границы BB (${lower[-1]:.2f})<br>  ↳ Продажи: У верхней границы BB (${upper[-1]:.2f})<br>&#8226; СТОП-ЛОСС: За границами диапазона ±1 ATR<br>&#8226; ДЕЙСТВИЯ:<br>  ↳ Уменьшение объема позиций<br>  ↳ Внимание на пробои диапазона<br>  ↳ Выставление лимитных ордеров от уровней</div>
+                    <div class="analysis-container">
+                        <div class="analysis-content">📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ ETHEREUM:<br>═══════════════════════════════<br><br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br>&#8226; Текущая цена: $1931.69<br>&#8226; Изменение (24ч): +0.20%<br>&#8226; Волатильность (годовая): 1.6%<br>&#8226; ATR: $0.71 (0.0%)<br><br>📈 ТРЕНД: ВОСХОДЯЩИЙ 📈<br>&#8226; Характеристика: Краткосрочный тренд положительный<br>&#8226; Сила тренда (ADX): 15.7 (СЛАБЫЙ)<br>&#8226; +DI: 61.4 | -DI: 38.6<br><br>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br>&#8226; RSI: 61.4 (НЕЙТРАЛЬНЫЙ ⚖️)<br>  ↳ Нормальная рыночная активность<br>&#8226; Стохастический RSI: <br>  ↳ %K: 100.0 | %D: 51.4<br>&#8226; MACD: ПРОДАЖА 📉<br>  ↳ MACD: 0.82 | Signal: 0.83<br>  ↳ Гистограмма: -0.01<br><br>📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:<br>&#8226; EMA 9: $1930.63<br>&#8226; EMA 21: $1929.89<br>&#8226; SMA 20: $1930.07<br>&#8226; SMA 50: $1927.79<br>&#8226; SMA 200: $1934.84<br><br>📏 BOLLINGER BANDS:<br>&#8226; Верхняя: $1931.84<br>&#8226; Средняя: $1930.57<br>&#8226; Нижняя: $1929.29<br>&#8226; Ширина: 0.1%<br>&#8226; Позиция: 93.9%<br><br>💡 РЕКОМЕНДАЦИИ:<br>&#8226; ТАКТИКА: Умеренная торговля по тренду<br>&#8226; ВХОДЫ: От нижней границы BB ($1929.29)<br>&#8226; СТОП-ЛОСС: -1.5 ATR ($1930.63)<br>&#8226; ТЕЙК-ПРОФИТ: До верхней границы BB ($1931.84)<br>&#8226; ДЕЙСТВИЯ:<br>  ↳ Покупки при отбое от поддержек<br>  ↳ Контроль риска не более 2% на сделку<br>  ↳ Следование за трендом с короткими целями</div>
+                    </div>
                 </div>
                 
                 <div class="section">
                     <h3>🔮 Прогноз</h3>
-                    <div>🔮 ПРОГНОЗ НА 24 ЧАСА:<br>───────────────────────<br>📊 Ожидаемый диапазон:<br>&#8226; Максимум: $1924.41<br>&#8226; Минимум: $1920.98<br>&#8226; Наиболее вероятно: $1922.35<br><br>📈 Ключевые уровни:<br>&#8226; Сопротивление: $1926.06<br>&#8226; Поддержка: $1921.24<br><br>⚡️ Факторы влияния:<br>&#8226; Тренд: НИСХОДЯЩИЙ<br>&#8226; Волатильность: 0.1%<br>&#8226; Ширина канала: $4.82<br><br>💡 Рекомендации:<br>&#8226; Внимание на уровни поддержки<br>&#8226; Осторожность при покупках<br></div>
+                    <div><div class="prediction-title">🔮 ПРОГНОЗ НА 24 ЧАСА:</div><div class="prediction-section"><div class="prediction-section-title">📊 Ожидаемый диапазон:</div><div class="prediction-section-content">
+                    <div class="price-range">
+                        <div class="price-range-item">
+                            <div class="price-range-label">Минимум</div>
+                            <div class="price-range-value">$1,930.11</div>
+                        </div>
+                        <div class="price-range-item">
+                            <div class="price-range-label">Вероятная цена</div>
+                            <div class="price-range-value">$1,932.06</div>
+                        </div>
+                        <div class="price-range-item">
+                            <div class="price-range-label">Максимум</div>
+                            <div class="price-range-value">$1,933.37</div>
+                        </div>
+                    </div>
+                    </div></div><div class="prediction-section"><div class="prediction-section-title">📈 Ключевые уровни:</div><div class="prediction-section-content">
+                    <div class="key-level key-level-resistance">
+                        <span>Сопротивление:</span>
+                        <span class="key-level-value">$1,931.89</span>
+                    </div>
+                    <div class="key-level key-level-support">
+                        <span>Поддержка:</span>
+                        <span class="key-level-value">$1,929.26</span>
+                    </div>
+                    </div></div><div class="prediction-section"><div class="prediction-section-title">⚡️ Факторы влияния:</div><div class="prediction-section-content"><div class="recommendation-item">Тренд: ВОСХОДЯЩИЙ</div><div class="recommendation-item">Волатильность: 0.1%</div><div class="recommendation-item">Ширина канала: $2.63</div></div></div><div class="prediction-section"><div class="prediction-section-title">🧠 ПОДРОБНОЕ ОБОСНОВАНИЕ:</div><div class="prediction-section-content"><div class="recommendation-item">Текущий тренд восходящий с умеренный импульсом</div><div class="recommendation-item">RSI = 61.6 указывает на нейтральный состояние</div><div class="recommendation-item">MACD показывает падающий импульс</div><div class="recommendation-item">Цена находится у верхней границы (риск снижения)</div><div class="recommendation-item">Вероятный сценарий: краткосрочная коррекция с последующим ростом</div><div class="recommendation-item">Прогнозный диапазон основан на исторической волатильности 0.1%</div><div class="recommendation-item">Расширение диапазона учитывает 24-часовой период прогноза</div><div class="recommendation-item">Факторы потенциального изменения прогноза:</div><div class="recommendation-item" style="padding-left: 40px;">Пробой уровня сопротивления может ускорить рост</div><div class="recommendation-item" style="padding-left: 40px;">Падение ниже SMA20 ($1930.07) может развернуть тренд</div></div></div><div class="prediction-section"><div class="prediction-section-title">💡 Рекомендации:</div><div class="prediction-section-content"><div class='recommendations'><div class="recommendation-item">Следить за уровнями сопротивления</div><div class="recommendation-item">Возможны покупки на откатах к SMA20</div><div class="recommendation-item">Установка стоп-лоссов ниже $1930.07</div></div></div></div></div>
                 </div>
                 
                 
-            <div class="section">
-                <h3>🌐 Социальные метрики</h3>
-                <div class="social-metrics">
-                    <div>Настроение в Reddit: Н/Д</div>
-                    <div>GitHub активность: Н/Д</div>
-                    <div>Социальный скор: Н/Д</div>
-                </div>
-            </div>
-            
                 
                 <div class="footer">
                     <div>Крипто-аналитика | Данные предоставлены CoinGecko</div>
-                    <div>Отчет сгенерирован автоматически 16.03.2025 02:03</div>
+                    <div>Отчет сгенерирован автоматически 16.03.2025 06:39</div>
                 </div>
             </div>
         </body>
