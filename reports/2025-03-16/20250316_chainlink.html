@@ -1,0 +1,171 @@
+
+        <!DOCTYPE html>
+        <html lang="ru">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Анализ Chainlink</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #333;
+                    background-color: #f9f9f9;
+                }
+                .container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                .header {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 15px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+                .logo {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-right: 15px;
+                }
+                .coin-info {
+                    flex-grow: 1;
+                }
+                .coin-name {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                .coin-symbol {
+                    color: #777;
+                    font-size: 16px;
+                    margin: 5px 0;
+                }
+                .price-info {
+                    text-align: right;
+                }
+                .current-price {
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                .price-change {
+                    margin: 5px 0;
+                }
+                .price-up {
+                    color: #28a745;
+                }
+                .price-down {
+                    color: #dc3545;
+                }
+                .timestamp {
+                    color: #777;
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+                .section {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+                h3 {
+                    margin-top: 0;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #eee;
+                }
+                .chart-placeholder {
+                    background-color: #f0f0f0;
+                    height: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 15px 0;
+                    border-radius: 5px;
+                }
+                .market-info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 15px;
+                }
+                .market-info div {
+                    flex: 1;
+                    min-width: 120px;
+                    margin-bottom: 10px;
+                }
+                .market-label {
+                    font-size: 12px;
+                    color: #777;
+                }
+                .market-value {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .footer {
+                    text-align: center;
+                    color: #777;
+                    font-size: 12px;
+                    margin-top: 30px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <img src="https://coin-images.coingecko.com/coins/images/877/large/chainlink-new-logo.png?1696502009" alt="link" class="logo">
+                    <div class="coin-info">
+                        <h1 class="coin-name">Chainlink</h1>
+                        <div class="coin-symbol">LINK</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="current-price">$13.85</div>
+                        <div class="price-change price-up">↑ 0.74%</div>
+                        <div class="timestamp">По данным на 16.03.2025 02:08</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>📈 Рыночная информация</h3>
+                    <div class="market-info">
+                        <div>
+                            <div class="market-label">Рыночная капитализация</div>
+                            <div class="market-value">$8.84 млрд</div>
+                        </div>
+                        <div>
+                            <div class="market-label">Объем торгов (24ч)</div>
+                            <div class="market-value">$387.27 млн</div>
+                        </div>
+                        <div>
+                            <div class="market-label">Ранг по капитализации</div>
+                            <div class="market-value">#15</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>🔍 Технический анализ</h3>
+                    <div>📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ CHAINLINK:<br>═══════════════════════════════<br><br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br>&#8226; Текущая цена: $13.84<br>&#8226; Изменение (24ч): +0.81%<br>&#8226; Волатильность (годовая): 2.6%<br>&#8226; ATR: $0.01 (0.1%)<br><br>📈 ТРЕНД: СИЛЬНЫЙ НИСХОДЯЩИЙ 📉<br>&#8226; Характеристика: Все МА выстроились в медвежьем порядке<br>&#8226; Сила тренда (ADX): 54.9 (СИЛЬНЫЙ)<br>&#8226; +DI: 13.8 | -DI: 86.2<br><br>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br>&#8226; RSI: 13.8 (ПЕРЕПРОДАН ⚠️)<br>  ↳ Возможен отскок<br>&#8226; Стохастический RSI: <br>  ↳ %K: 0.0 | %D: 8.8<br>&#8226; MACD: ПРОДАЖА 📉<br>  ↳ MACD: -0.05 | Signal: -0.04<br>  ↳ Гистограмма: -0.01<br><br>📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:<br>&#8226; EMA 9: $13.88<br>&#8226; EMA 21: $13.92<br>&#8226; SMA 20: $13.93<br>&#8226; SMA 50: $14.01<br>&#8226; SMA 200: $14.03<br><br>📏 BOLLINGER BANDS:<br>&#8226; Верхняя: $13.89<br>&#8226; Средняя: $13.86<br>&#8226; Нижняя: $13.82<br>&#8226; Ширина: 0.5%<br>&#8226; Позиция: 28.9%<br><br>💡 РЕКОМЕНДАЦИИ:<br>&#8226; ТАКТИКА: Поиск точек для отскока<br>&#8226; ВХОДЫ: После формирования разворотных паттернов<br>&#8226; СТОП-ЛОСС: -1 ATR от точки входа<br>&#8226; РИСКИ: Продолжение нисходящего тренда<br>&#8226; ДЕЙСТВИЯ:<br>  ↳ Ожидание подтверждения разворота<br>  ↳ Мелкие тестовые позиции<br>  ↳ Фиксация прибыли по короткой позиции</div>
+                </div>
+                
+                <div class="section">
+                    <h3>🔮 Прогноз</h3>
+                    <div>🔮 ПРОГНОЗ НА 24 ЧАСА:<br>───────────────────────<br>📊 Ожидаемый диапазон:<br>&#8226; Максимум: $13.86<br>&#8226; Минимум: $13.82<br>&#8226; Наиболее вероятно: $13.83<br><br>📈 Ключевые уровни:<br>&#8226; Сопротивление: $13.89<br>&#8226; Поддержка: $13.82<br><br>⚡️ Факторы влияния:<br>&#8226; Тренд: НИСХОДЯЩИЙ<br>&#8226; Волатильность: 0.1%<br>&#8226; Ширина канала: $0.07<br><br>💡 Рекомендации:<br>&#8226; Внимание на уровни поддержки<br>&#8226; Осторожность при покупках<br></div>
+                </div>
+                
+                
+                
+                <div class="footer">
+                    <div>Крипто-аналитика | Данные предоставлены CoinGecko</div>
+                    <div>Отчет сгенерирован автоматически 16.03.2025 02:08</div>
+                </div>
+            </div>
+        </body>
+        </html>
+        
