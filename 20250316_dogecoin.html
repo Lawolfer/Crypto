@@ -1,0 +1,349 @@
+
+        <!DOCTYPE html>
+        <html lang="ru">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Анализ Dogecoin</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    color: #333;
+                    background-color: #f9f9f9;
+                }
+                .container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+                .header {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 15px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+                .logo {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-right: 15px;
+                }
+                .coin-info {
+                    flex-grow: 1;
+                }
+                .coin-name {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                .coin-symbol {
+                    color: #777;
+                    font-size: 16px;
+                    margin: 5px 0;
+                }
+                .price-info {
+                    text-align: right;
+                }
+                .current-price {
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+                .price-change {
+                    margin: 5px 0;
+                }
+                .price-up {
+                    color: #28a745;
+                }
+                .price-down {
+                    color: #dc3545;
+                }
+                .timestamp {
+                    color: #777;
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+                .section {
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+                h3 {
+                    margin-top: 0;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #eee;
+                }
+                .chart-placeholder {
+                    background-color: #f0f0f0;
+                    height: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 15px 0;
+                    border-radius: 5px;
+                }
+                .market-info {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 15px;
+                }
+                .market-info div {
+                    flex: 1;
+                    min-width: 120px;
+                    margin-bottom: 10px;
+                }
+                .market-label {
+                    font-size: 12px;
+                    color: #777;
+                }
+                .market-value {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .footer {
+                    text-align: center;
+                    color: #777;
+                    font-size: 12px;
+                    margin-top: 30px;
+                }
+                .prediction-title {
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 20px;
+                    padding: 10px 0;
+                    text-align: center;
+                    background: linear-gradient(to right, rgba(26, 35, 126, 0.05), rgba(26, 35, 126, 0.1), rgba(26, 35, 126, 0.05));
+                    border-radius: 8px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .prediction-section {
+                    margin-bottom: 20px;
+                    padding: 15px;
+                    border-radius: 8px;
+                    background-color: #fafafa;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                    transition: all 0.3s ease;
+                }
+                .prediction-section:hover {
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    transform: translateY(-2px);
+                }
+                .prediction-section:last-child {
+                    margin-bottom: 0;
+                }
+                .prediction-section-title {
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                }
+                .prediction-section-title::before {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 16px;
+                    background-color: #3949ab;
+                    margin-right: 10px;
+                    border-radius: 3px;
+                }
+                .prediction-section-content {
+                    padding: 10px;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: 1px solid #eee;
+                }
+                .price-range {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 15px 0;
+                    background: linear-gradient(to right, #e3f2fd, #bbdefb, #e3f2fd);
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .price-range-item {
+                    text-align: center;
+                    flex: 1;
+                }
+                .price-range-label {
+                    font-size: 12px;
+                    color: #546e7a;
+                    margin-bottom: 5px;
+                }
+                .price-range-value {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #1a237e;
+                }
+                .key-level {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                }
+                .key-level-resistance {
+                    color: #d32f2f;
+                }
+                .key-level-support {
+                    color: #388e3c;
+                }
+                .key-level-value {
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+                .recommendation-item {
+                    margin-bottom: 8px;
+                    padding-left: 20px;
+                    position: relative;
+                }
+                .recommendation-item::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
+                    color: #3949ab;
+                    font-weight: bold;
+                }
+                .analysis-container {
+                    padding: 10px;
+                    background-color: #fafafa;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                }
+                .analysis-content {
+                    padding: 15px;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    border: 1px solid #eee;
+                    line-height: 1.6;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+                }
+                .analysis-section {
+                    margin-bottom: 15px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px dashed #e0e0e0;
+                }
+                .analysis-section:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .technical-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                .technical-indicator {
+                    display: inline-block;
+                    margin: 5px 10px 5px 0;
+                    padding: 3px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .indicator-buy {
+                    background-color: rgba(76, 175, 80, 0.15);
+                    color: #388e3c;
+                }
+                .indicator-sell {
+                    background-color: rgba(244, 67, 54, 0.15);
+                    color: #d32f2f;
+                }
+                .indicator-neutral {
+                    background-color: rgba(117, 117, 117, 0.15);
+                    color: #616161;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <img src="https://coin-images.coingecko.com/coins/images/5/large/dogecoin.png?1696501409" alt="doge" class="logo">
+                    <div class="coin-info">
+                        <h1 class="coin-name">Dogecoin</h1>
+                        <div class="coin-symbol">DOGE</div>
+                    </div>
+                    <div class="price-info">
+                        <div class="current-price">$0.18</div>
+                        <div class="price-change price-up">↑ 0.91%</div>
+                        <div class="timestamp">По данным на 16.03.2025 06:30</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>📈 Рыночная информация</h3>
+                    <div class="market-info">
+                        <div>
+                            <div class="market-label">Рыночная капитализация</div>
+                            <div class="market-value">$26.14 млрд</div>
+                        </div>
+                        <div>
+                            <div class="market-label">Объем торгов (24ч)</div>
+                            <div class="market-value">$675.64 млн</div>
+                        </div>
+                        <div>
+                            <div class="market-label">Ранг по капитализации</div>
+                            <div class="market-value">#9</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>🔍 Технический анализ</h3>
+                    <div class="analysis-container">
+                        <div class="analysis-content">📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ DOGECOIN:<br>═══════════════════════════════<br><br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br>&#8226; Текущая цена: $0.18<br>&#8226; Изменение (24ч): +0.93%<br>&#8226; Волатильность (годовая): 2.2%<br>&#8226; ATR: $0.00 (0.1%)<br><br>📈 ТРЕНД: ВОСХОДЯЩИЙ 📈<br>&#8226; Характеристика: Краткосрочный тренд положительный<br>&#8226; Сила тренда (ADX): 30.5 (СИЛЬНЫЙ)<br>&#8226; +DI: 64.0 | -DI: 36.0<br><br>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br>&#8226; RSI: 64.0 (НЕЙТРАЛЬНЫЙ ⚖️)<br>  ↳ Нормальная рыночная активность<br>&#8226; Стохастический RSI: <br>  ↳ %K: 100.0 | %D: 51.0<br>&#8226; MACD: ПРОДАЖА 📉<br>  ↳ MACD: 0.00 | Signal: 0.00<br>  ↳ Гистограмма: -0.00<br><br>📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:<br>&#8226; EMA 9: $0.18<br>&#8226; EMA 21: $0.18<br>&#8226; SMA 20: $0.18<br>&#8226; SMA 50: $0.17<br>&#8226; SMA 200: $0.18<br><br>📏 BOLLINGER BANDS:<br>&#8226; Верхняя: $0.18<br>&#8226; Средняя: $0.18<br>&#8226; Нижняя: $0.18<br>&#8226; Ширина: 0.1%<br>&#8226; Позиция: 77.2%<br><br>💡 РЕКОМЕНДАЦИИ:<br>&#8226; ТАКТИКА: Умеренная торговля по тренду<br>&#8226; ВХОДЫ: От нижней границы BB ($0.18)<br>&#8226; СТОП-ЛОСС: -1.5 ATR ($0.18)<br>&#8226; ТЕЙК-ПРОФИТ: До верхней границы BB ($0.18)<br>&#8226; ДЕЙСТВИЯ:<br>  ↳ Покупки при отбое от поддержек<br>  ↳ Контроль риска не более 2% на сделку<br>  ↳ Следование за трендом с короткими целями</div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>🔮 Прогноз</h3>
+                    <div><div class="prediction-title">🔮 ПРОГНОЗ НА 24 ЧАСА:</div><div class="prediction-section"><div class="prediction-section-title">📊 Ожидаемый диапазон:</div><div class="prediction-section-content">
+                    <div class="price-range">
+                        <div class="price-range-item">
+                            <div class="price-range-label">Минимум</div>
+                            <div class="price-range-value">$0.18</div>
+                        </div>
+                        <div class="price-range-item">
+                            <div class="price-range-label">Вероятная цена</div>
+                            <div class="price-range-value">$0.18</div>
+                        </div>
+                        <div class="price-range-item">
+                            <div class="price-range-label">Максимум</div>
+                            <div class="price-range-value">$0.18</div>
+                        </div>
+                    </div>
+                    </div></div><div class="prediction-section"><div class="prediction-section-title">📈 Ключевые уровни:</div><div class="prediction-section-content">
+                    <div class="key-level key-level-resistance">
+                        <span>Сопротивление:</span>
+                        <span class="key-level-value">$0.18</span>
+                    </div>
+                    <div class="key-level key-level-support">
+                        <span>Поддержка:</span>
+                        <span class="key-level-value">$0.18</span>
+                    </div>
+                    </div></div><div class="prediction-section"><div class="prediction-section-title">⚡️ Факторы влияния:</div><div class="prediction-section-content"><div class="recommendation-item">Тренд: ВОСХОДЯЩИЙ</div><div class="recommendation-item">Волатильность: 0.1%</div><div class="recommendation-item">Ширина канала: $0.00</div></div></div><div class="prediction-section"><div class="prediction-section-title">🧠 ПОДРОБНОЕ ОБОСНОВАНИЕ:</div><div class="prediction-section-content"><div class="recommendation-item">Текущий тренд восходящий с умеренный импульсом</div><div class="recommendation-item">RSI = 64.4 указывает на нейтральный состояние</div><div class="recommendation-item">MACD показывает падающий импульс</div><div class="recommendation-item">Цена находится у верхней границы (риск снижения)</div><div class="recommendation-item">Вероятный сценарий: краткосрочная коррекция с последующим ростом</div><div class="recommendation-item">Прогнозный диапазон основан на исторической волатильности 0.1%</div><div class="recommendation-item">Расширение диапазона учитывает 24-часовой период прогноза</div><div class="recommendation-item">Факторы потенциального изменения прогноза:</div><div class="recommendation-item" style="padding-left: 40px;">Пробой уровня сопротивления может ускорить рост</div><div class="recommendation-item" style="padding-left: 40px;">Падение ниже SMA20 ($0.18) может развернуть тренд</div></div></div><div class="prediction-section"><div class="prediction-section-title">💡 Рекомендации:</div><div class="prediction-section-content"><div class='recommendations'><div class="recommendation-item">Следить за уровнями сопротивления</div><div class="recommendation-item">Возможны покупки на откатах к SMA20</div><div class="recommendation-item">Установка стоп-лоссов ниже $0.18</div></div></div></div></div>
+                </div>
+                
+                
+                
+                <div class="footer">
+                    <div>Крипто-аналитика | Данные предоставлены CoinGecko</div>
+                    <div>Отчет сгенерирован автоматически 16.03.2025 06:30</div>
+                </div>
+            </div>
+        </body>
+        </html>
+        
