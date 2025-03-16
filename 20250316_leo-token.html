@@ -114,6 +114,158 @@
                     font-size: 12px;
                     margin-top: 30px;
                 }
+                .prediction-title {
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 20px;
+                    padding: 10px 0;
+                    text-align: center;
+                    background: linear-gradient(to right, rgba(26, 35, 126, 0.05), rgba(26, 35, 126, 0.1), rgba(26, 35, 126, 0.05));
+                    border-radius: 8px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .prediction-section {
+                    margin-bottom: 20px;
+                    padding: 15px;
+                    border-radius: 8px;
+                    background-color: #fafafa;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                    transition: all 0.3s ease;
+                }
+                .prediction-section:hover {
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    transform: translateY(-2px);
+                }
+                .prediction-section:last-child {
+                    margin-bottom: 0;
+                }
+                .prediction-section-title {
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                }
+                .prediction-section-title::before {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 16px;
+                    background-color: #3949ab;
+                    margin-right: 10px;
+                    border-radius: 3px;
+                }
+                .prediction-section-content {
+                    padding: 10px;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    border: 1px solid #eee;
+                }
+                .price-range {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 15px 0;
+                    background: linear-gradient(to right, #e3f2fd, #bbdefb, #e3f2fd);
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+                }
+                .price-range-item {
+                    text-align: center;
+                    flex: 1;
+                }
+                .price-range-label {
+                    font-size: 12px;
+                    color: #546e7a;
+                    margin-bottom: 5px;
+                }
+                .price-range-value {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #1a237e;
+                }
+                .key-level {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                }
+                .key-level-resistance {
+                    color: #d32f2f;
+                }
+                .key-level-support {
+                    color: #388e3c;
+                }
+                .key-level-value {
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+                .recommendation-item {
+                    margin-bottom: 8px;
+                    padding-left: 20px;
+                    position: relative;
+                }
+                .recommendation-item::before {
+                    content: '•';
+                    position: absolute;
+                    left: 5px;
+                    color: #3949ab;
+                    font-weight: bold;
+                }
+                .analysis-container {
+                    padding: 10px;
+                    background-color: #fafafa;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+                }
+                .analysis-content {
+                    padding: 15px;
+                    background-color: #fff;
+                    border-radius: 6px;
+                    border: 1px solid #eee;
+                    line-height: 1.6;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+                }
+                .analysis-section {
+                    margin-bottom: 15px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px dashed #e0e0e0;
+                }
+                .analysis-section:last-child {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+                .technical-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #1a237e;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+                .technical-indicator {
+                    display: inline-block;
+                    margin: 5px 10px 5px 0;
+                    padding: 3px 10px;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .indicator-buy {
+                    background-color: rgba(76, 175, 80, 0.15);
+                    color: #388e3c;
+                }
+                .indicator-sell {
+                    background-color: rgba(244, 67, 54, 0.15);
+                    color: #d32f2f;
+                }
+                .indicator-neutral {
+                    background-color: rgba(117, 117, 117, 0.15);
+                    color: #616161;
+                }
             </style>
         </head>
         <body>
@@ -125,9 +277,9 @@
                         <div class="coin-symbol">LEO</div>
                     </div>
                     <div class="price-info">
-                        <div class="current-price">$9.74</div>
-                        <div class="price-change price-down">↓ 0.07%</div>
-                        <div class="timestamp">По данным на 16.03.2025 02:06</div>
+                        <div class="current-price">$9.75</div>
+                        <div class="price-change price-up">↑ 0.08%</div>
+                        <div class="timestamp">По данным на 16.03.2025 07:33</div>
                     </div>
                 </div>
                 
@@ -136,11 +288,11 @@
                     <div class="market-info">
                         <div>
                             <div class="market-label">Рыночная капитализация</div>
-                            <div class="market-value">$9.00 млрд</div>
+                            <div class="market-value">$9.01 млрд</div>
                         </div>
                         <div>
                             <div class="market-label">Объем торгов (24ч)</div>
-                            <div class="market-value">$2.26 млн</div>
+                            <div class="market-value">$2.17 млн</div>
                         </div>
                         <div>
                             <div class="market-label">Ранг по капитализации</div>
@@ -151,19 +303,66 @@
                 
                 <div class="section">
                     <h3>🔍 Технический анализ</h3>
-                    <div>📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ LEO-TOKEN:<br>═══════════════════════════════<br><br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br>&#8226; Текущая цена: $9.74<br>&#8226; Изменение (24ч): -0.11%<br>&#8226; Волатильность (годовая): 11.5%<br>&#8226; ATR: $0.01 (0.1%)<br><br>📈 ТРЕНД: СИЛЬНЫЙ ВОСХОДЯЩИЙ 🚀<br>&#8226; Характеристика: Все МА выстроились в бычьем порядке<br>&#8226; Сила тренда (ADX): 9.9 (СЛАБЫЙ)<br>&#8226; +DI: 53.9 | -DI: 46.1<br><br>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br>&#8226; RSI: 53.9 (НЕЙТРАЛЬНЫЙ ⚖️)<br>  ↳ Нормальная рыночная активность<br>&#8226; Стохастический RSI: <br>  ↳ %K: 71.7 | %D: 63.4<br>&#8226; MACD: ПРОДАЖА 📉<br>  ↳ MACD: 0.01 | Signal: 0.01<br>  ↳ Гистограмма: -0.00<br><br>📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:<br>&#8226; EMA 9: $9.74<br>&#8226; EMA 21: $9.74<br>&#8226; SMA 20: $9.74<br>&#8226; SMA 50: $9.72<br>&#8226; SMA 200: $9.68<br><br>📏 BOLLINGER BANDS:<br>&#8226; Верхняя: $9.75<br>&#8226; Средняя: $9.74<br>&#8226; Нижняя: $9.73<br>&#8226; Ширина: 0.2%<br>&#8226; Позиция: 62.1%<br><br>💡 РЕКОМЕНДАЦИИ:<br>&#8226; ТАКТИКА: Удержание длинных позиций<br>&#8226; ВХОДЫ: На коррекциях к SMA20 (${sma_20:.2f})<br>&#8226; СТОП-ЛОСС: -2 ATR (${(current_price - 2*atr):.2f})<br>&#8226; ТЕЙК-ПРОФИТ: +3 ATR (${(current_price + 3*atr):.2f})<br>&#8226; ДЕЙСТВИЯ:<br>  ↳ Наращивание позиций при пробоях максимумов<br>  ↳ Трейлинг-стоп за минимумами свечей<br>  ↳ Мониторинг объемов для подтверждения тренда</div>
+                    <div class="analysis-container">
+                        <div class="analysis-content">🔮 ПРОГНОЗ НА 24 ЧАСА:<br>───────────────────────<br>📊 Ожидаемый диапазон:<br>&#8226; Максимум: $9.82<br>&#8226; Минимум: $9.70<br>&#8226; Наиболее вероятно: $9.78<br><br>📈 Ключевые уровни:<br>&#8226; Сопротивление: $9.76<br>&#8226; Поддержка: $9.74<br><br>⚡️ Факторы влияния:<br>&#8226; Тренд: СИЛЬНЫЙ ВОСХОДЯЩИЙ<br>&#8226; Волатильность: 0.6%<br>&#8226; Ширина канала: $0.03<br><br>🧠 ПОДРОБНОЕ ОБОСНОВАНИЕ:<br>&#8226; Текущий тренд сильный восходящий с сильный импульсом<br>&#8226; RSI = 60.0 указывает на нейтральный состояние<br>&#8226; MACD показывает растущий импульс<br>&#8226; Цена находится в средней части канала<br>&#8226; Вероятный сценарий: краткосрочная коррекция с последующим ростом<br>&#8226; Прогнозный диапазон основан на исторической волатильности 0.6%<br>&#8226; Расширение диапазона учитывает 24-часовой период прогноза<br>&#8226; Факторы потенциального изменения прогноза:<br>  - Пробой уровня сопротивления может ускорить рост<br>  - Падение ниже SMA20 ($9.75) может развернуть тренд<br><br>💡 Рекомендации:<br>&#8226; Следить за уровнями сопротивления<br>&#8226; Возможны покупки на откатах к SMA20<br>&#8226; Установка стоп-лоссов ниже $9.75<br></div>
+                    </div>
                 </div>
                 
                 <div class="section">
                     <h3>🔮 Прогноз</h3>
-                    <div>🔮 ПРОГНОЗ НА 24 ЧАСА:<br>───────────────────────<br>📊 Ожидаемый диапазон:<br>&#8226; Максимум: $9.80<br>&#8226; Минимум: $9.68<br>&#8226; Наиболее вероятно: $9.75<br><br>📈 Ключевые уровни:<br>&#8226; Сопротивление: $9.75<br>&#8226; Поддержка: $9.73<br><br>⚡️ Факторы влияния:<br>&#8226; Тренд: ВОСХОДЯЩИЙ<br>&#8226; Волатильность: 0.6%<br>&#8226; Ширина канала: $0.02<br><br>💡 Рекомендации:<br>&#8226; Следить за уровнями сопротивления<br>&#8226; Возможны покупки на откатах<br></div>
+                    <div><div class="prediction-title">📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ LEO-TOKEN:
+═══════════════════════════════
+
+💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:
+• Текущая цена: $9.76
+• Изменение (24ч): +0.20%
+• Волатильность (годовая): 11.6%
+• ATR: $0.00 (0.0%)
+
+📈 ТРЕНД: СИЛЬНЫЙ ВОСХОДЯЩИЙ 🚀
+• Характеристика: Все МА выстроились в бычьем порядке
+• Сила тренда (ADX): 13.6 (СЛАБЫЙ)
+• +DI: 60.0 | -DI: 40.0
+
+🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:
+• RSI: 60.0 (НЕЙТРАЛЬНЫЙ ⚖️)
+  ↳ Нормальная рыночная активность
+• Стохастический RSI: 
+  ↳ %K: 100.0 | %D: 94.9
+• MACD: ПОКУПКА 📈
+  ↳ MACD: 0.00 | Signal: 0.00
+  ↳ Гистограмма: 0.00
+
+📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:
+• EMA 9: $9.75
+• EMA 21: $9.75
+• SMA 20: $9.75
+• SMA 50: $9.74
+• SMA 200: $9.72
+
+📏 BOLLINGER BANDS:
+• Верхняя: $9.76
+• Средняя: $9.75
+• Нижняя: $9.74
+• Ширина: 0.3%
+• Позиция: 73.4%
+
+💡 РЕКОМЕНДАЦИИ:
+• ТАКТИКА: Удержание длинных позиций
+• ВХОДЫ: На коррекциях к SMA20 ($9.75)
+• СТОП-ЛОСС: -2 ATR ($9.75)
+• ТЕЙК-ПРОФИТ: +3 ATR ($9.77)
+• ДЕЙСТВИЯ:
+  ↳ Наращивание позиций при пробоях максимумов
+  ↳ Трейлинг-стоп за минимумами свечей
+  ↳ Мониторинг объемов для подтверждения тренда</div><div class="prediction-section"><div class="prediction-section-title">📊 РАСШИРЕННЫЙ ТЕХНИЧЕСКИЙ АНАЛИЗ LEO-TOKEN:</div><div class="prediction-section-content">═══════════════════════════════<br>💵 ЦЕНОВЫЕ ПОКАЗАТЕЛИ:<br><div class="recommendation-item">Текущая цена: $9.76</div><div class="recommendation-item">Изменение (24ч): +0.20%</div><div class="recommendation-item">Волатильность (годовая): 11.6%</div><div class="recommendation-item">ATR: $0.00 (0.0%)</div></div></div><div class="prediction-section"><div class="prediction-section-title">📈 ТРЕНД: СИЛЬНЫЙ ВОСХОДЯЩИЙ 🚀</div><div class="prediction-section-content"><div class="recommendation-item">Характеристика: Все МА выстроились в бычьем порядке</div><div class="recommendation-item">Сила тренда (ADX): 13.6 (СЛАБЫЙ)</div><div class="recommendation-item">+DI: 60.0 | -DI: 40.0</div>🎯 ТЕХНИЧЕСКИЕ ИНДИКАТОРЫ:<br><div class="recommendation-item">RSI: 60.0 (НЕЙТРАЛЬНЫЙ ⚖️)</div>↳ Нормальная рыночная активность<br><div class="recommendation-item">Стохастический RSI:</div>↳ %K: 100.0 | %D: 94.9<br><div class="recommendation-item">MACD: ПОКУПКА 📈</div>↳ MACD: 0.00 | Signal: 0.00<br>↳ Гистограмма: 0.00<br></div></div><div class="prediction-section"><div class="prediction-section-title">📊 СКОЛЬЗЯЩИЕ СРЕДНИЕ:</div><div class="prediction-section-content"><div class="recommendation-item">EMA 9: $9.75</div><div class="recommendation-item">EMA 21: $9.75</div><div class="recommendation-item">SMA 20: $9.75</div><div class="recommendation-item">SMA 50: $9.74</div><div class="recommendation-item">SMA 200: $9.72</div>📏 BOLLINGER BANDS:<br><div class="recommendation-item">Верхняя: $9.76</div><div class="recommendation-item">Средняя: $9.75</div><div class="recommendation-item">Нижняя: $9.74</div><div class="recommendation-item">Ширина: 0.3%</div><div class="recommendation-item">Позиция: 73.4%</div></div></div><div class="prediction-section"><div class="prediction-section-title">💡 РЕКОМЕНДАЦИИ:</div><div class="prediction-section-content"><div class="recommendation-item">ТАКТИКА: Удержание длинных позиций</div><div class="recommendation-item">ВХОДЫ: На коррекциях к SMA20 ($9.75)</div><div class="recommendation-item">СТОП-ЛОСС: -2 ATR ($9.75)</div><div class="recommendation-item">ТЕЙК-ПРОФИТ: +3 ATR ($9.77)</div><div class="recommendation-item">ДЕЙСТВИЯ:</div>↳ Наращивание позиций при пробоях максимумов<br>↳ Трейлинг-стоп за минимумами свечей<br>↳ Мониторинг объемов для подтверждения тренда<br></div></div></div>
                 </div>
                 
                 
                 
                 <div class="footer">
                     <div>Крипто-аналитика | Данные предоставлены CoinGecko</div>
-                    <div>Отчет сгенерирован автоматически 16.03.2025 02:06</div>
+                    <div>Отчет сгенерирован автоматически 16.03.2025 07:33</div>
                 </div>
             </div>
         </body>
